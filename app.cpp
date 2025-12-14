@@ -57,6 +57,22 @@ void kinematics()
 	cout << "1. motion with constant velocity\n";
 	cout << "2. motion with constant acceleration\n";
 	cout << "Enter your choice (1-2): ";
+
+	int type;
+	cin >> type;
+
+	if (type == 1)
+	{
+		cout << "Constant Velocity Selected.\n";
+	}
+	else if (type == 2)
+	{
+		cout << "Constant Acceleration Selected.\n";
+	}
+	else
+	{
+		cout << "Invalid choice for kinematics problem type.\n";
+	}
 }
 
 void vectors()
