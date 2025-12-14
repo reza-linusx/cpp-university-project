@@ -51,6 +51,12 @@ void quadratic()
 void kinematics()
 {
 	cout << "Kinematics Calculator Selected.\n";
+
+	// types of problems
+	cout << "Choose a kinematics problem type:\n";
+	cout << "1. motion with constant velocity\n";
+	cout << "2. motion with constant acceleration\n";
+	cout << "Enter your choice (1-2): ";
 }
 
 void vectors()
