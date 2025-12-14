@@ -50,7 +50,7 @@ void quadratic()
 
 void kinematics()
 {
-	cout << "Kinematics Calculator Selected.\n";
+	cout << "=====Kinematics Calculator Selected.=====\n";
 
 	// types of problems
 	cout << "Choose a kinematics problem type:\n";
@@ -63,7 +63,7 @@ void kinematics()
 
 	if (type == 1)
 	{
-		cout << "Constant Velocity Selected.\n";
+		cout << "=====Constant Velocity Selected.===== \n";
 	}
 	else if (type == 2)
 	{
@@ -77,7 +77,7 @@ void kinematics()
 
 void vectors()
 {
-	cout << "Vector Operations Selected.\n";
+	cout << "=====Vector Operations Selected.=====\n";
 }
 
 int main()
