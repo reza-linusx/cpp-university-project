@@ -11,6 +11,12 @@ void quadratic()
 	double a;
 	cin >> a;
 
+	if (a == 0)
+	{
+		cout << "This is not a quadratic equation (a cannot be 0).\n";
+		return;
+	}
+
 	// get b
 	cout << "Please enter b :";
 	double b;
