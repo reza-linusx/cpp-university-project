@@ -10,5 +10,8 @@ int main()
 	cout << "3. Vectors\n";
 	cout << "Enter your choice (1-3): ";
 
+	int choice;
+	cin >> choice;
+
 	return 0;
 }
