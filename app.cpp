@@ -13,5 +13,21 @@ int main()
 	int choice;
 	cin >> choice;
 
+	if (choice == 1)
+	{
+		cout << "You selected Quadratic Equation.\n";
+	}
+	else if (choice == 2)
+	{
+		cout << "You selected Kinematics.\n";
+	}
+	else if (choice == 3)
+	{
+		cout << "You selected Vectors.\n";
+	}
+	else
+	{
+		cout << "Invalid choice. Please run the program again.\n";
+	}
 	return 0;
 }
