@@ -20,7 +20,8 @@ void quadratic()
 	double c;
 	cin >> c;
 
-	cout << "You entered a=" << a << ", b=" << b << ", c=" << c << "\n";
+	// display equation
+	cout << "your equation is " << a << "x^2 + " << b << "x + " << c << " = 0\n";
 }
 
 void kinematics()
