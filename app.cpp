@@ -1,4 +1,5 @@
 #include <iostream>
+#include <cmath>
 using namespace std;
 
 void quadratic()
@@ -22,6 +23,29 @@ void quadratic()
 
 	// display equation
 	cout << "your equation is " << a << "x^2 + " << b << "x + " << c << " = 0\n";
+
+	// calculate delta
+	double delta = (b * b) - (4 * a * c);
+	cout << "Delta is " << delta << "\n";
+
+	// calculate roots
+	if (delta < 0)
+	{
+		cout << "No real roots exist.\n";
+	}
+	else if (delta == 0)
+	{
+		double root = -b / (2 * a);
+		cout << "One real root exists: x = " << root << "\n";
+		cout << "the equation is (x - " << root << ")^2 = 0\n";
+	}
+	else
+	{
+		double root1 = (-b + sqrt(delta)) / (2 * a);
+		double root2 = (-b - sqrt(delta)) / (2 * a);
+		cout << "Two real roots exist: x1 = " << root1 << ", x2 = " << root2 << "\n";
+		cout << "the equation is (x - " << root1 << ")(x - " << root2 << ") = 0\n";
+	}
 }
 
 void kinematics()
