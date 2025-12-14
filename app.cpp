@@ -1,6 +1,21 @@
 #include <iostream>
 using namespace std;
 
+void quadratic()
+{
+	cout << "Quadratic Equation Solver Selected.\n";
+}
+
+void kinematics()
+{
+	cout << "Kinematics Calculator Selected.\n";
+}
+
+void vectors()
+{
+	cout << "Vector Operations Selected.\n";
+}
+
 int main()
 {
 	cout << "=== Physics & Math Helper ===\n";
@@ -15,15 +30,15 @@ int main()
 
 	if (choice == 1)
 	{
-		cout << "You selected Quadratic Equation.\n";
+		quadratic();
 	}
 	else if (choice == 2)
 	{
-		cout << "You selected Kinematics.\n";
+		kinematics();
 	}
 	else if (choice == 3)
 	{
-		cout << "You selected Vectors.\n";
+		vectors();
 	}
 	else
 	{
