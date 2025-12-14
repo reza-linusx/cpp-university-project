@@ -4,6 +4,23 @@ using namespace std;
 void quadratic()
 {
 	cout << "Quadratic Equation Solver Selected.\n";
+
+	// get a
+	cout << "Please enter a :";
+	double a;
+	cin >> a;
+
+	// get b
+	cout << "Please enter b :";
+	double b;
+	cin >> b;
+
+	// get c
+	cout << "Please enter c :";
+	double c;
+	cin >> c;
+
+	cout << "You entered a=" << a << ", b=" << b << ", c=" << c << "\n";
 }
 
 void kinematics()
