@@ -91,6 +91,26 @@ void kinematics()
 		if (choice == 1)
 		{
 			cout << "You chose to solve for Initial Position (x0).\n";
+			// enter variables
+			cout << "Enter Final Position (x): ";
+			double x;
+			cin >> x;
+			cout << "Enter Velocity (v): ";
+			double v;
+			cin >> v;
+			cout << "Enter Time (t): ";
+			double t;
+			cin >> t;
+
+			// edge case for negative time
+			if (t < 0)
+			{
+				cout << "Time cannot be negative.\n";
+				return;
+			}
+			// calculate initial position
+			double x0 = x - v * t;
+			cout << "Initial Position (x0) = " << x0 << "\n";
 		}
 		else if (choice == 2)
 		{
