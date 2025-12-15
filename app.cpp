@@ -2,6 +2,32 @@
 #include <cmath>
 using namespace std;
 
+string calculateQuadratic(double a, double b, double c)
+{
+	double delta = b * b - 4 * a * c;
+	if (delta < 0)
+	{
+		return "No real roots exist.";
+	}
+	else if (delta == 0)
+	{
+		double root = -b / (2 * a);
+		return "One real root exists: x = " + to_string(root);
+		// cout << "The equation is (x - " << root << ")^2 = 0\n";
+	}
+	else
+	{
+		double root1 = (-b + sqrt(delta)) / (2 * a);
+		double root2 = (-b - sqrt(delta)) / (2 * a);
+		return "Two real roots exist: x1 = " + to_string(root1) + ", x2 = " + to_string(root2);
+		// cout << "The equation is (x "
+		// 	 << (root1 < 0 ? "+ " : "- ") << abs(root1)
+		// 	 << ")(x "
+		// 	 << (root2 < 0 ? "+ " : "- ") << abs(root2)
+		// 	 << ") = 0\n";
+	}
+}
+
 void quadratic()
 {
 	cout << "========== Quadratic Equation Solver Selected ==========\n";
@@ -34,32 +60,9 @@ void quadratic()
 		 << (c > 0 ? "+ " : "- ") << abs(c)
 		 << " = 0\n";
 
-	// calculate delta
-	double delta = (b * b) - (4 * a * c);
-	cout << "Delta is " << delta << "\n";
-
 	// calculate roots
-	if (delta < 0)
-	{
-		cout << "No real roots exist.\n";
-	}
-	else if (delta == 0)
-	{
-		double root = -b / (2 * a);
-		cout << "One real root exists: x = " << root << "\n";
-		cout << "The equation is (x - " << root << ")^2 = 0\n";
-	}
-	else
-	{
-		double root1 = (-b + sqrt(delta)) / (2 * a);
-		double root2 = (-b - sqrt(delta)) / (2 * a);
-		cout << "Two real roots exist: x1 = " << root1 << ", x2 = " << root2 << "\n";
-		cout << "The equation is (x "
-			 << (root1 < 0 ? "+ " : "- ") << abs(root1)
-			 << ")(x "
-			 << (root2 < 0 ? "+ " : "- ") << abs(root2)
-			 << ") = 0\n";
-	}
+	string result = calculateQuadratic(a, b, c);
+	cout << result << "\n";
 }
 
 void kinematics()
