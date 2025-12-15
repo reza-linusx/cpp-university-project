@@ -4,62 +4,65 @@ using namespace std;
 
 string calculateQuadratic(double a, double b, double c, bool onlyPositive = false)
 {
-
+	// Guard against invalid quadratic
 	if (a == 0)
 	{
 		return "Invalid quadratic: a cannot be zero.";
 	}
-	
+
 	double delta = b * b - 4 * a * c;
+
 	if (delta < 0)
 	{
 		return "No real roots exist.";
 	}
-	else if (delta == 0)
+
+	// One root
+	if (delta == 0)
 	{
-		// cout << "The equation is (x - " << root << ")^2 = 0\n";
 		double root = -b / (2 * a);
+
 		if (onlyPositive && root < 0)
 		{
 			return "No positive real roots exist.";
 		}
+
 		return "One real root exists: x = " + to_string(root);
 	}
-	else
+
+	// Two roots
+	double root1 = (-b + sqrt(delta)) / (2 * a);
+	double root2 = (-b - sqrt(delta)) / (2 * a);
+
+	if (!onlyPositive)
 	{
-		// cout << "The equation is (x "
-		// 	 << (root1 < 0 ? "+ " : "- ") << abs(root1)
-		// 	 << ")(x "
-		// 	 << (root2 < 0 ? "+ " : "- ") << abs(root2)
-		// 	 << ") = 0\n";
-		double root1 = (-b + sqrt(delta)) / (2 * a);
-		double root2 = (-b - sqrt(delta)) / (2 * a);
-		if (onlyPositive)
-		{
-			string result;
-			if (root1 >= 0)
-			{
-				result += "x1 = " + to_string(root1) + " ";
-			}
-			if (root2 >= 0)
-			{
-				if (!result.empty())
-				{
-					result += ", ";
-				}
-				result += "x2 = " + to_string(root2);
-			}
-			if (result.empty())
-			{
-				return "No positive real roots exist.";
-			}
-			return "Two real roots exist: " + result;
-		}
-		else
-		{
-			return "Two real roots exist: x1 = " + to_string(root1) + ", x2 = " + to_string(root2);
-		}
+		return "Two real roots exist: x1 = " + to_string(root1) +
+			   ", x2 = " + to_string(root2);
 	}
+
+	// Only positive roots requested
+	string result;
+
+	if (root1 >= 0)
+	{
+		result += "x1 = " + to_string(root1);
+	}
+
+	if (root2 >= 0)
+	{
+		if (!result.empty())
+		{
+			result += ", ";
+		}
+		result += "x2 = " + to_string(root2);
+	}
+
+	if (result.empty())
+	{
+		return "No positive real roots exist.";
+	}
+
+	return "Positive real roots: " + result;
 }
 
 void quadratic()
