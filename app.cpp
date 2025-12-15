@@ -77,6 +77,16 @@ void kinematics()
 	if (type == 1)
 	{
 		cout << "========== Constant Velocity Selected ==========\n";
+		// all the variables : initial position (x0), final position (x), velocity (v), time (t)
+		cout << "choose the variable you want to solve for:\n";
+		cout << "1. Initial Position (x0)\n";
+		cout << "2. Final Position (x)\n";
+		cout << "3. Velocity (v)\n";
+		cout << "4. Time (t)\n";
+		cout << "Enter your choice (1-4): ";
+
+		int choice;
+		cin >> choice;
 	}
 	else if (type == 2)
 	{
