@@ -600,31 +600,44 @@ void vectors()
 
 int main()
 {
-	cout << "========== Physics & Math Helper ==========\n";
-	cout << "Choose an option:\n";
-	cout << "1. Quadratic Equation\n";
-	cout << "2. Kinematics\n";
-	cout << "3. Vectors\n";
-	cout << "Enter your choice (1-3): ";
 
-	int choice;
-	cin >> choice;
+	bool keepRunning = true;
 
-	if (choice == 1)
+	while (keepRunning)
 	{
-		quadratic();
+		cout << "========== Physics & Math Helper ==========\n";
+		cout << "Choose an option:\n";
+		cout << "1. Quadratic Equation\n";
+		cout << "2. Kinematics\n";
+		cout << "3. Vectors\n";
+		cout << "4. Exit\n";
+		cout << "Enter your choice (1-4): ";
+
+		int choice;
+		cin >> choice;
+
+		if (choice == 1)
+		{
+			quadratic();
+		}
+		else if (choice == 2)
+		{
+			kinematics();
+		}
+		else if (choice == 3)
+		{
+			vectors();
+		}
+		else if (choice == 4)
+		{
+			cout << "Exiting the program. Goodbye!\n";
+			keepRunning = false;
+		}
+		else
+		{
+			cout << "Invalid choice. Please run the program again.\n";
+		}
 	}
-	else if (choice == 2)
-	{
-		kinematics();
-	}
-	else if (choice == 3)
-	{
-		vectors();
-	}
-	else
-	{
-		cout << "Invalid choice. Please run the program again.\n";
-	}
+
 	return 0;
 }
