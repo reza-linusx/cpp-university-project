@@ -87,6 +87,27 @@ void kinematics()
 
 		int choice;
 		cin >> choice;
+
+		if (choice == 1)
+		{
+			cout << "You chose to solve for Initial Position (x0).\n";
+		}
+		else if (choice == 2)
+		{
+			cout << "You chose to solve for Final Position (x).\n";
+		}
+		else if (choice == 3)
+		{
+			cout << "You chose to solve for Velocity (v).\n";
+		}
+		else if (choice == 4)
+		{
+			cout << "You chose to solve for Time (t).\n";
+		}
+		else
+		{
+			cout << "Invalid choice for variable to solve for.\n";
+		}
 	}
 	else if (type == 2)
 	{
