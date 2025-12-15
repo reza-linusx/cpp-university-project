@@ -272,6 +272,67 @@ void kinematics()
 		else if (choice == 2)
 		{
 			// solve for final velocity (v)
+			cout << "You chose to solve for Final Velocity (v).\n";
+			cout << "what are your available variables?.\n";
+			cout << "1. initial velocity (v0), acceleration (a), and time (t)\n";
+			cout << "2. displacement (d), initial velocity (v0), and acceleration (a)\n";
+			cout << "Enter your choice (1-2): ";
+			int subChoice;
+			cin >> subChoice;
+
+			if (subChoice == 1)
+			{
+				cout << "Enter Initial Velocity (v0): ";
+				double v0;
+				cin >> v0;
+				cout << "Enter Acceleration (a): ";
+				double a;
+				cin >> a;
+				cout << "Enter Time (t): ";
+				double t;
+				cin >> t;
+
+				// edge case for zero or negative time
+				if (t <= 0)
+				{
+					cout << "Time must be positive and non-zero.\n";
+					return;
+				}
+				// calculate final velocity
+				double v = v0 + a * t;
+				cout << "Final Velocity (v) = " << v << "\n";
+			}
+			else if (subChoice == 2)
+			{
+				cout << "Enter Displacement (d): ";
+				double d;
+				cin >> d;
+
+				cout << "Enter Initial Velocity (v0): ";
+				double v0;
+				cin >> v0;
+
+				cout << "Enter Acceleration (a): ";
+				double a;
+				cin >> a;
+
+				// compute inside of sqrt
+				double value = v0 * v0 + 2 * a * d;
+
+				if (value < 0)
+				{
+					cout << "Error: The values lead to a negative number under the square root.\n";
+					cout << "Please check your inputs";
+					return;
+				}
+
+				double v = sqrt(value);
+				cout << "Final Velocity (v) = " << v << "\n";
+			}
+			else
+			{
+				cout << "Invalid choice for sub-option.\n";
+			}
 		}
 		else if (choice == 3)
 		{
