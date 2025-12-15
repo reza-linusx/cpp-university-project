@@ -201,7 +201,7 @@ void kinematics()
 		cin >> choice;
 
 		// calculations
-		if (choice = 1)
+		if (choice == 1)
 		{
 			// solve for initial velocity (v0)
 			// initial velocity has 2 formulas
