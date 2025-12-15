@@ -257,6 +257,7 @@ void kinematics()
 				if (value < 0)
 				{
 					cout << "Error: The values lead to a negative number under the square root.\n";
+					cout << "Please check your inputs";
 					return;
 				}
 
