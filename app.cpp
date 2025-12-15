@@ -4,6 +4,12 @@ using namespace std;
 
 string calculateQuadratic(double a, double b, double c, bool onlyPositive = false)
 {
+
+	if (a == 0)
+	{
+		return "Invalid quadratic: a cannot be zero.";
+	}
+	
 	double delta = b * b - 4 * a * c;
 	if (delta < 0)
 	{
@@ -503,9 +509,8 @@ void kinematics()
 				double C = -d;
 
 				// calculate roots using existing function
-				string result = calculateQuadratic(A, B, C);
-				cout << "Possible solutions for Time (t): " << result << "\n";
-				cout << "Note: Only positive values of time are physically meaningful.\n";
+				string result = calculateQuadratic(A, B, C, true);
+				cout << "Time (t): " << result << "\n";
 			}
 			else
 			{
