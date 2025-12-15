@@ -251,8 +251,8 @@ void kinematics()
 
 				// calculate initial velocity using the formula
 				// x - x0 = v0 * t + 0.5 * a * t^2
-				// we can rearrange it to find v0
-				// v0 = sqrt(v^2 - 2 * a * d)
+				// v^2 - v0^2 = 2 * a * d
+				// v0^2 = v^2 - 2 * a * d
 				double v0 = sqrt(v * v - 2 * a * d);
 				cout << "Initial Velocity (v0) = " << v0 << "\n";
 			}
