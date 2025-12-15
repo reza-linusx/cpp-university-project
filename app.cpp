@@ -337,6 +337,14 @@ void kinematics()
 		else if (choice == 3)
 		{
 			// solve for acceleration (a)
+			cout << "You chose to solve for Acceleration (a).\n";
+			cout << "what are your available variables?.\n";
+			cout << "1. initial velocity (v0), final velocity (v), and time (t)\n";
+			cout << "2. displacement (d), initial velocity (v0), and time (t)\n";
+			cout << "3. initial velocity (v0), final velocity (v), and displacement (d)\n";
+			cout << "Enter your choice (1-3):";
+			int subChoice;
+			cin >> subChoice;
 		}
 		else if (choice == 4)
 		{
