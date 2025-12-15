@@ -212,7 +212,7 @@ void kinematics()
 			cout << "what are your available variables?.\n";
 			cout << "1. final velocity (v), acceleration (a), and time (t)\n";
 			cout << "2. displacement (d), final velocity (v), and acceleration (a)\n";
-			cout << "Enter your choice (1-3): ";
+			cout << "Enter your choice (1-2): ";
 			int subChoice;
 			cin >> subChoice;
 			if (subChoice == 1)
@@ -268,6 +268,8 @@ void kinematics()
 			{
 				cout << "Invalid choice for sub-option.\n";
 			}
+		} else if(choice == 2) {
+			// solve for final velocity (v)
 		}
 	}
 	else
