@@ -242,18 +242,25 @@ void kinematics()
 				cout << "Enter Displacement (d): ";
 				double d;
 				cin >> d;
+
 				cout << "Enter Final Velocity (v): ";
 				double v;
 				cin >> v;
+
 				cout << "Enter Acceleration (a): ";
 				double a;
 				cin >> a;
 
-				// calculate initial velocity using the formula
-				// x - x0 = v0 * t + 0.5 * a * t^2
-				// v^2 - v0^2 = 2 * a * d
-				// v0^2 = v^2 - 2 * a * d
-				double v0 = sqrt(v * v - 2 * a * d);
+				// compute inside of sqrt
+				double value = v * v - 2 * a * d;
+
+				if (value < 0)
+				{
+					cout << "Error: The values lead to a negative number under the square root.\n";
+					return;
+				}
+
+				double v0 = sqrt(value);
 				cout << "Initial Velocity (v0) = " << v0 << "\n";
 			}
 			else
