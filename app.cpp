@@ -268,8 +268,26 @@ void kinematics()
 			{
 				cout << "Invalid choice for sub-option.\n";
 			}
-		} else if(choice == 2) {
+		}
+		else if (choice == 2)
+		{
 			// solve for final velocity (v)
+		}
+		else if (choice == 3)
+		{
+			// solve for acceleration (a)
+		}
+		else if (choice == 4)
+		{
+			// solve for time (t)
+		}
+		else if (choice == 5)
+		{
+			// solve for displacement (d)
+		}
+		else
+		{
+			cout << "Invalid choice for variable to solve for.\n";
 		}
 	}
 	else
