@@ -199,6 +199,23 @@ void kinematics()
 		cout << "Enter your choice (1-5): ";
 		int choice;
 		cin >> choice;
+
+		// calculations
+		if (choice = 1)
+		{
+			// solve for initial velocity (v0)
+			// initial velocity has 2 formulas
+			// we either have final velocity, acceleration, and time
+			// or we have displacement, final velocity, and acceleration
+			// so we need to gather information from the user and then decide what to use
+			cout << "You chose to solve for Initial Velocity (v0).\n";
+			cout << "what are your available variables?.\n";
+			cout << "1. final velocity (v), acceleration (a), and time (t)\n";
+			cout << "2. displacement (d), final velocity (v), and acceleration (a)\n";
+			cout << "Enter your choice (1-2): ";
+			int subChoice;
+			cin >> subChoice;
+		}
 	}
 	else
 	{
