@@ -395,7 +395,21 @@ void kinematics()
 			}
 			else if (subChoice == 3)
 			{
-				// to be implemented
+				cout << "Enter Initial Velocity (v0): ";
+				double v0;
+				cin >> v0;
+
+				cout << "Enter Final Velocity (v): ";
+				double v;
+				cin >> v;
+
+				cout << "Enter Displacement (d): ";
+				double d;
+				cin >> d;
+
+				// calculate acceleration
+				double a = (v * v - v0 * v0) / (2 * d);
+				cout << "Acceleration (a) = " << a << "\n";
 			}
 			else
 			{
