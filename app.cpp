@@ -215,6 +215,48 @@ void kinematics()
 			cout << "Enter your choice (1-2): ";
 			int subChoice;
 			cin >> subChoice;
+			if (subChoice == 1)
+			{
+				cout << "Enter Final Velocity (v): ";
+				double v;
+				cin >> v;
+				cout << "Enter Acceleration (a): ";
+				double a;
+				cin >> a;
+				cout << "Enter Time (t): ";
+				double t;
+				cin >> t;
+
+				// edge case for zero or negative time
+				if (t <= 0)
+				{
+					cout << "Time must be positive and non-zero.\n";
+					return;
+				}
+				// calculate initial velocity
+				double v0 = v - a * t;
+				cout << "Initial Velocity (v0) = " << v0 << "\n";
+			}
+			else if (subChoice == 2)
+			{
+				cout << "Enter Displacement (d): ";
+				double d;
+				cin >> d;
+				cout << "Enter Final Velocity (v): ";
+				double v;
+				cin >> v;
+				cout << "Enter Acceleration (a): ";
+				double a;
+				cin >> a;
+
+				// calculate initial velocity using the formula
+				double v0 = sqrt(v * v - 2 * a * d);
+				cout << "Initial Velocity (v0) = " << v0 << "\n";
+			}
+			else
+			{
+				cout << "Invalid choice for sub-option.\n";
+			}
 		}
 	}
 	else
