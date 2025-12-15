@@ -474,29 +474,10 @@ void kinematics()
 				double B = v0;
 				double C = -d;
 
-				// calculate delta
-				double delta = (B * B) - (4 * A * C);
-				cout << "Delta is " << delta << "\n";
-
-				// calculate roots
-				if (delta < 0)
-				{
-					cout << "No real roots exist for time.\n";
-				}
-				else if (delta == 0)
-				{
-					double t = -B / (2 * A);
-					cout << "One real root exists for time: t = " << t << "\n";
-				}
-				else
-				{
-					double t1 = (-B + sqrt(delta)) / (2 * A);
-					double t2 = (-B - sqrt(delta)) / (2 * A);
-					if (t1 >= 0)
-						cout << "t1 = " << t1 << "\n";
-					if (t2 >= 0)
-						cout << "t2 = " << t2 << "\n";
-				}
+				// calculate roots using existing function
+				string result = calculateQuadratic(A, B, C);
+				cout << "Possible solutions for Time (t): " << result << "\n";
+				cout << "Note: Only positive values of time are physically meaningful.\n";
 			}
 			else
 			{
