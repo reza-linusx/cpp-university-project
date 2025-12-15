@@ -345,6 +345,23 @@ void kinematics()
 			cout << "Enter your choice (1-3):";
 			int subChoice;
 			cin >> subChoice;
+
+			if (subChoice == 1)
+			{
+				// to be implemented
+			}
+			else if (subChoice == 2)
+			{
+				// to be implemented
+			}
+			else if (subChoice == 3)
+			{
+				// to be implemented
+			}
+			else
+			{
+				cout << "Invalid choice for sub-option.\n";
+			}
 		}
 		else if (choice == 4)
 		{
