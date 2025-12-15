@@ -419,6 +419,16 @@ void kinematics()
 		else if (choice == 4)
 		{
 			// solve for time (t)
+			// v = at + v0 ==> t = (v - v0) / a
+			// we have a quadratic equation when solving for time using d = v0t + 0.5at^2
+			// we can use the function we already have for quadratic equations
+			cout << "You chose to solve for Time (t).\n";
+			cout << "what are your available variables?.\n";
+			cout << "1. initial velocity (v0), final velocity (v), and acceleration (a)\n";
+			cout << "2. displacement (d), initial velocity (v0), and acceleration (a)\n";
+			cout << "Enter your choice (1-2): ";
+			int subChoice;
+			cin >> subChoice;
 		}
 		else if (choice == 5)
 		{
