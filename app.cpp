@@ -370,7 +370,28 @@ void kinematics()
 			}
 			else if (subChoice == 2)
 			{
-				// to be implemented
+				cout << "Enter Displacement (d): ";
+				double d;
+				cin >> d;
+
+				cout << "Enter Initial Velocity (v0): ";
+				double v0;
+				cin >> v0;
+
+				cout << "Enter Time (t): ";
+				double t;
+				cin >> t;
+
+				// edge case for zero or negative time
+				if (t <= 0)
+				{
+					cout << "Time must be positive and non-zero.\n";
+					return;
+				}
+
+				// calculate acceleration
+				double a = (2 * (d - v0 * t)) / (t * t);
+				cout << "Acceleration (a) = " << a << "\n";
 			}
 			else if (subChoice == 3)
 			{
