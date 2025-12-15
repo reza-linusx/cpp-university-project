@@ -4,10 +4,10 @@ using namespace std;
 
 void quadratic()
 {
-	cout << "Quadratic Equation Solver Selected.\n";
+	cout << "========== Quadratic Equation Solver Selected ==========\n";
 
 	// get a
-	cout << "Please enter a :";
+	cout << "========== Please enter a: ==========\n";
 	double a;
 	cin >> a;
 
@@ -18,17 +18,17 @@ void quadratic()
 	}
 
 	// get b
-	cout << "Please enter b :";
+	cout << "========== Please enter b: ==========\n";
 	double b;
 	cin >> b;
 
 	// get c
-	cout << "Please enter c :";
+	cout << "========== Please enter c: ==========\n";
 	double c;
 	cin >> c;
 
 	// display equation
-	cout << "your equation is "
+	cout << "Your equation is "
 		 << a << "x^2 "
 		 << (b > 0 ? "+ " : "- ") << abs(b) << "x "
 		 << (c > 0 ? "+ " : "- ") << abs(c)
@@ -47,14 +47,14 @@ void quadratic()
 	{
 		double root = -b / (2 * a);
 		cout << "One real root exists: x = " << root << "\n";
-		cout << "the equation is (x - " << root << ")^2 = 0\n";
+		cout << "The equation is (x - " << root << ")^2 = 0\n";
 	}
 	else
 	{
 		double root1 = (-b + sqrt(delta)) / (2 * a);
 		double root2 = (-b - sqrt(delta)) / (2 * a);
 		cout << "Two real roots exist: x1 = " << root1 << ", x2 = " << root2 << "\n";
-		cout << "the equation is (x "
+		cout << "The equation is (x "
 			 << (root1 < 0 ? "+ " : "- ") << abs(root1)
 			 << ")(x "
 			 << (root2 < 0 ? "+ " : "- ") << abs(root2)
@@ -64,12 +64,11 @@ void quadratic()
 
 void kinematics()
 {
-	cout << "=====Kinematics Calculator Selected.=====\n";
+	cout << "========== Kinematics Calculator Selected ==========\n";
 
-	// types of problems
 	cout << "Choose a kinematics problem type:\n";
-	cout << "1. motion with constant velocity\n";
-	cout << "2. motion with constant acceleration\n";
+	cout << "1. Motion with constant velocity\n";
+	cout << "2. Motion with constant acceleration\n";
 	cout << "Enter your choice (1-2): ";
 
 	int type;
@@ -77,26 +76,26 @@ void kinematics()
 
 	if (type == 1)
 	{
-		cout << "=====Constant Velocity Selected.===== \n";
+		cout << "========== Constant Velocity Selected ==========\n";
 	}
 	else if (type == 2)
 	{
-		cout << "Constant Acceleration Selected.\n";
+		cout << "========== Constant Acceleration Selected ==========\n";
 	}
 	else
 	{
-		cout << "Invalid choice for kinematics problem type.\n";
+		cout << "========== Invalid choice for kinematics problem type ==========\n";
 	}
 }
 
 void vectors()
 {
-	cout << "=====Vector Operations Selected.=====\n";
+	cout << "========== Vector Operations Selected ==========\n";
 }
 
 int main()
 {
-	cout << "=== Physics & Math Helper ===\n";
+	cout << "========== Physics & Math Helper ==========\n";
 	cout << "Choose an option:\n";
 	cout << "1. Quadratic Equation\n";
 	cout << "2. Kinematics\n";
