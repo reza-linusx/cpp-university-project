@@ -189,6 +189,16 @@ void kinematics()
 	else if (type == 2)
 	{
 		cout << "========== Constant Acceleration Selected ==========\n";
+		// chose variable to solve for
+		cout << "choose the variable you want to solve for:\n";
+		cout << "1. Initial Velocity (v0)\n";
+		cout << "2. Final Velocity (v)\n";
+		cout << "3. Acceleration (a)\n";
+		cout << "4. Time (t)\n";
+		cout << "5. Displacement (d)\n";
+		cout << "Enter your choice (1-5): ";
+		int choice;
+		cin >> choice;
 	}
 	else
 	{
