@@ -454,6 +454,46 @@ void kinematics()
 			}
 			else if (subChoice == 2)
 			{
+				cout << "Enter Displacement (d): ";
+				double d;
+				cin >> d;
+
+				cout << "Enter Initial Velocity (v0): ";
+				double v0;
+				cin >> v0;
+
+				cout << "Enter Acceleration (a): ";
+				double a;
+				cin >> a;
+
+				// set up quadratic equation: 0.5at^2 + v0t - d = 0
+				double A = 0.5 * a;
+				double B = v0;
+				double C = -d;
+
+				// calculate delta
+				double delta = (B * B) - (4 * A * C);
+				cout << "Delta is " << delta << "\n";
+
+				// calculate roots
+				if (delta < 0)
+				{
+					cout << "No real roots exist for time.\n";
+				}
+				else if (delta == 0)
+				{
+					double t = -B / (2 * A);
+					cout << "One real root exists for time: t = " << t << "\n";
+				}
+				else
+				{
+					double t1 = (-B + sqrt(delta)) / (2 * A);
+					double t2 = (-B - sqrt(delta)) / (2 * A);
+					if (t1 >= 0)
+						cout << "t1 = " << t1 << "\n";
+					if (t2 >= 0)
+						cout << "t2 = " << t2 << "\n";
+				}
 			}
 			else
 			{
@@ -463,7 +503,7 @@ void kinematics()
 		else if (choice == 5)
 		{
 			// solve for displacement (d)
-		}
+				}
 		else
 		{
 			cout << "Invalid choice for variable to solve for.\n";
