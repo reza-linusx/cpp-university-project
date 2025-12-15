@@ -28,7 +28,11 @@ void quadratic()
 	cin >> c;
 
 	// display equation
-	cout << "your equation is " << a << "x^2 + " << b << "x + " << c << " = 0\n";
+	cout << "your equation is "
+		 << a << "x^2 "
+		 << (b > 0 ? "+ " : "- ") << abs(b) << "x "
+		 << (c > 0 ? "+ " : "- ") << abs(c)
+		 << " = 0\n";
 
 	// calculate delta
 	double delta = (b * b) - (4 * a * c);
