@@ -432,7 +432,25 @@ void kinematics()
 
 			if (subChoice == 1)
 			{
-				
+				cout << "Enter Initial Velocity (v0): ";
+				double v0;
+				cin >> v0;
+				cout << "Enter Final Velocity (v): ";
+				double v;
+				cin >> v;
+				cout << "Enter Acceleration (a): ";
+				double a;
+				cin >> a;
+
+				// edge case for zero acceleration
+				if (a == 0)
+				{
+					cout << "Acceleration cannot be zero.\n";
+					return;
+				}
+				// calculate time
+				double t = (v - v0) / a;
+				cout << "Time (t) = " << t << "\n";
 			}
 			else if (subChoice == 2)
 			{
