@@ -50,7 +50,11 @@ void quadratic()
 		double root1 = (-b + sqrt(delta)) / (2 * a);
 		double root2 = (-b - sqrt(delta)) / (2 * a);
 		cout << "Two real roots exist: x1 = " << root1 << ", x2 = " << root2 << "\n";
-		cout << "the equation is (x - " << root1 << ")(x - " << root2 << ") = 0\n";
+		cout << "the equation is (x "
+			 << (root1 < 0 ? "+ " : "- ") << abs(root1)
+			 << ")(x "
+			 << (root2 < 0 ? "+ " : "- ") << abs(root2)
+			 << ") = 0\n";
 	}
 }
 
