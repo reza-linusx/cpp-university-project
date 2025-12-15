@@ -212,8 +212,7 @@ void kinematics()
 			cout << "what are your available variables?.\n";
 			cout << "1. final velocity (v), acceleration (a), and time (t)\n";
 			cout << "2. displacement (d), final velocity (v), and acceleration (a)\n";
-			cout << "3. displacement (d), initial velocity (v0), and acceleration (a)\n";
-			cout << "Enter your choice (1-2-3): ";
+			cout << "Enter your choice (1-3): ";
 			int subChoice;
 			cin >> subChoice;
 			if (subChoice == 1)
@@ -256,10 +255,6 @@ void kinematics()
 				// v0^2 = v^2 - 2 * a * d
 				double v0 = sqrt(v * v - 2 * a * d);
 				cout << "Initial Velocity (v0) = " << v0 << "\n";
-			}
-			else if (subChoice == 3)
-			{
-				// some code
 			}
 			else
 			{
